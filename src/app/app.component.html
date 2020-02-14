@@ -1,0 +1,15 @@
+<!-- <div class="main-container">
+    <div *ngFor="let comp of comps; let i = index">
+        <app-box></app-box>
+    </div>
+</div> -->
+<!-- <app-box [obj]="obj"></app-box> -->
+
+<div class="container">
+    <div class="row col-2-grid">
+        <div class="box" *ngFor="let obj of objs; let i = index" [class.hide]="!obj.visible">
+            <app-box [obj]="obj" (emitter)="emitter($event)" *ngIf="obj.visible"></app-box>
+
+        </div>
+    </div>
+</div>
